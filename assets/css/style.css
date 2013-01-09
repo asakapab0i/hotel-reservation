@@ -191,6 +191,7 @@ body {font-size: 13px;}
 
 #confirmcontent input,textarea,select {
     border: #606061 solid 1px;
+    padding: 0px;
 }
 
 .confirmbookwrapper{

@@ -53,8 +53,6 @@ function bookingBox() {
                                                 </div>
                                                   <div class="select2">
                                                 <select id="day">';
-                                                
-                                               
                                                      for($i = 1; $i < 32; $i++){
                                                         echo '<option>'.$i.'</option>';
                                                     }

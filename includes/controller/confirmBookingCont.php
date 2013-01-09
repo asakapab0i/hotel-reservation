@@ -13,6 +13,41 @@ session_start();
  */
 class confirmBookingCont {
 
+    function modalSuccess() {
+        echo '<div id="modalSuccess" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Choose a room</h2>
+                <div class="rooms">
+                    <div class="wrapper pad_bot2">
+                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
+                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                        <a href="confirmbooking.php?rmtype=standard" class="button2">Book now</a>
+                    </div>
+                    <div class="wrapper pad_bot2">
+                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
+                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                        <a href="#" class="button2">Book now</a>
+                    </div>
+                    <div class="wrapper pad_bot2">
+                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
+                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                        <a href="#" class="button2">Book now</a>
+                    </div>
+                    <div class="wrapper pad_bot2">
+                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
+                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                        <a href="#" class="button2">Book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    }
+
     //put your code here
     function confirmBooking() {
         echo '   <!-- content -->
@@ -32,7 +67,7 @@ class confirmBookingCont {
                                 <option>Mr.</option>
                                 <option>Mrs.</option>
                                 <option>Ms.</option>
-                            </select>';
+                            </select><br>';
 
         confirmBookingCont::firstname();
         echo 'Middle Name:
@@ -44,9 +79,7 @@ class confirmBookingCont {
                             Address:
                             <input type="text" id="address" value="" size="50" />
                             <br>
-                            First Name:
-                            <input type="text" id="fname" value="" />
-                            <br>';
+                           ';
         confirmBookingCont::email();
         echo'
                           
@@ -56,7 +89,7 @@ class confirmBookingCont {
                            ';
         confirmBookingCont::bookdetails();
         echo '
-            <a href="#" style="margin-left: 125px;" type="button" class="button2">Confirm Booking</a>
+            <a href="#" id="confirmAjax" style="margin-left: 125px;" type="button" class="button2">Confirm Booking</a>
                         </form>
 
 
@@ -132,24 +165,30 @@ class confirmBookingCont {
                     echo '<option' . '>' . $i . '</option>';
                 }
             }
-            echo'
-                            </select>
+            echo'</select>
                             <br>
-                            Arrival Date: 
-                            <input type="date" id="date">
-                            <br>';
+                            Arrival Date:';
+            $month = $_SESSION['month'];
+            $day = $_SESSION['day'];
+            $year = $_SESSION['year'];
+            $date = $month . '/' . $day . '/' . $year;
+            echo '<input type="text" id="date" value="' . $date . '">';
+            echo'<br>';
+
+
+
             if (isset($_REQUEST['rmtype'])) {
                 $rmtype = $_REQUEST['rmtype'];
 
                 if (strtolower($rmtype) == 'standard') {
                     echo 'Room Type:
                             <select id="rmtype">
-                                <option selected>Standard</option>
-                                <option>Deluxe</option>
-                                <option>Executive</option>
-                                <option>Superior</option>
-                                <option>Ambassador</option>
-                                <option>Presidential</option>
+                                <option value="1" selected>Standard</option>
+                                <option value="2">Deluxe</option>
+                                <option value="3">Executive</option>
+                                <option value="4">Superior</option>
+                                <option value="5">Ambassador</option>
+                                <option value="6">Presidential</option>
                                 
                             </select>';
                 } else if (strtolower($rmtype) == 'deluxe') {
