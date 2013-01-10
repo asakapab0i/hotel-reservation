@@ -21,6 +21,12 @@
         //footer 
         $global->footermenu();
         ?>
+        
+        <?php
+        //modal 
+        $global->modalScript();
+        ?>
+
         <?php
         //js script
         $contact->scriptBelow();

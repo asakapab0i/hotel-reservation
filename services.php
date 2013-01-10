@@ -21,10 +21,14 @@
         $global->footermenu();
         ?>
         <?php
+        //modal 
+        $global->modalScript();
+        ?>
+        <?php
         //js script
         $services->scriptBelow();
         ?>
-        
-        
+
+
     </body>
 </html>

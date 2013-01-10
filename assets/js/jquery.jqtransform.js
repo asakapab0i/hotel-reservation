@@ -102,15 +102,11 @@
 			var oLabel = jqTransformGetLabel($(this));
 			oLabel && oLabel.bind('click',function(){$input.focus();});
 	
-			var inputSize=$input.width();
-			if($input.attr('size')){
-				inputSize = $input.attr('size')*10;
-				$input.css('width',inputSize);
-			}
+			
 			
 			$input.addClass("jqTransformInput").wrap('<div class="jqTransformInputWrapper"><div class="jqTransformInputInner"><div></div></div></div>');
 			var $wrapper = $input.parent().parent().parent();
-			$wrapper.css("width", inputSize+10);
+			
 			$input
 				.focus(function(){$wrapper.addClass("jqTransformInputWrapper_focus");})
 				.blur(function(){$wrapper.removeClass("jqTransformInputWrapper_focus");})
@@ -119,7 +115,7 @@
 	
 			/* If this is safari we need to add an extra class */
 			$.browser.safari && $wrapper.addClass('jqTransformSafari');
-			$.browser.safari && $input.css('width',$wrapper.width()+16);
+			//$.browser.safari && $input.css('width',$wrapper.width()+16);
 			this.wrapper = $wrapper;
 			
 		});

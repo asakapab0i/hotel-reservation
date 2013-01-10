@@ -23,7 +23,7 @@
         //footer 
         $global->footermenu();
         ?>
-
+        
         <?php
         $confirmBook->modalSuccess();
         ?>

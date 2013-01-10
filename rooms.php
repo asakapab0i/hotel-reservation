@@ -21,6 +21,10 @@
         $global->footermenu();
         ?>
         <?php
+        //modal 
+        $global->modalScript();
+        ?>
+        <?php
         //js script
         $rooms->scriptBelow();
         ?>

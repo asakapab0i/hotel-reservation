@@ -189,7 +189,7 @@ body {font-size: 13px;}
     text-spacing: no-compress;
 }
 
-#confirmcontent input,textarea,select {
+#confirmcontent input,select {
     border: #606061 solid 1px;
     padding: 0px;
 }
@@ -204,3 +204,28 @@ body {font-size: 13px;}
     overflow: hidden;
     padding: 10px;
 }
+
+
+#basic-modal-content {display: none;}
+#simplemodal-overlay {background-color:#000;}
+#simplemodal-container { color:#bbb; background:rgb(18, 17, 15); border:1px solid #444; padding:12px; overflow: hidden;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {
+    cursor: pointer;
+    padding: 5px;
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+#simplemodal-container #basic-modal-content {padding:8px;}

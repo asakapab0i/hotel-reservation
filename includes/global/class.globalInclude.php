@@ -125,6 +125,7 @@ class globalInclude {
         <script type="text/javascript" src="assets/js/kwicks-1.5.1.pack.js"></script>
         <script type="text/javascript" src="assets/js/atooltip.jquery.js"></script>
         <script type="text/javascript" src="assets/js/jquery.jqtransform.js"></script>
+        <script type="text/javascript" src="assets/js/modal.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
 
         <!--[if lt IE 9]>
@@ -144,38 +145,36 @@ class globalInclude {
 
     function modalScript() {
 
-        echo '  <div id="openModal" class="modalDialog">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
-                <h2>Choose a room</h2>
-                <div class="rooms">
-                    <div class="wrapper pad_bot2">
-                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
-                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
-                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
-                        <a href="confirmbooking.php?rmtype=standard" class="button2">Book now</a>
-                    </div>
-                    <div class="wrapper pad_bot2">
-                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
-                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
-                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
-                        <a href="#" class="button2">Book now</a>
-                    </div>
-                    <div class="wrapper pad_bot2">
-                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
-                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
-                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
-                        <a href="#" class="button2">Book now</a>
-                    </div>
-                    <div class="wrapper pad_bot2">
-                        <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
-                        <p class="pad_bot1"><strong class="color3">At vero eos et accusamus et iusto odio</strong><br>
-                            Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
-                        <a href="#" class="button2">Book now</a>
-                    </div>
+        echo '<div id="basic-modal-content">
+            <h2>Choose a room</h2>
+            <div class="rooms">
+                <div class="wrapper pad_bot2">
+                    <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                    <p class="pad_bot1"><strong class="color1">At vero eos et accusamus et iusto odio</strong><br>
+                        Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                    <a href="confirmbooking.php?rmtype=standard" class="button2">Book now</a>
+                </div>
+                <div class="wrapper pad_bot2">
+                    <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                    <p class="pad_bot1"><strong class="color1">At vero eos et accusamus et iusto odio</strong><br>
+                        Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                    <a href="#" class="button2">Book now</a>
+                </div>
+                <div class="wrapper pad_bot2">
+                    <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                    <p class="pad_bot1"><strong class="color1">At vero eos et accusamus et iusto odio</strong><br>
+                        Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                    <a href="#" class="button2">Book now</a>
+                </div>
+                <div class="wrapper pad_bot2">
+                    <figure class="left marg_right1"><img src="assets/img//page2_img1.jpg" alt=""></figure>
+                    <p class="pad_bot1"><strong class="color1">At vero eos et accusamus et iusto odio</strong><br>
+                        Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi quisquam est, qui dolorem ipsum sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+                    <a href="#" class="button2">Book now</a>
                 </div>
             </div>
-        </div>';
+        </div>
+    </div>';
     }
 
 }
